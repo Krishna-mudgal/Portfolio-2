@@ -5,4 +5,4 @@ Users can toggle between Dark and Light Mode for a better viewing experience.
 Responsive design ensures it looks great on all devices.
 The project is structured with clean, maintainable code.
 It is deployed and live for public access.
-🔗[view](https://portfolio-2-one-puce-19.vercel.app/projects)
+🔗[view](https://portfolio-2-366248akk-krishna-mudgals-projects.vercel.app/)
