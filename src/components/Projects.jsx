@@ -26,7 +26,7 @@ const projectList = [
   {
     title: "Portfolio Website",
     overview: "Personal portfolio to showcase projects, skills & resume.",
-    link: "https://yourportfolio.com",
+    link: "https://github.com/Krishna-mudgal/Portfolio-2",
     points: [
       "Fully responsive dark-mode design.",
       "Downloadable resume integration.",
