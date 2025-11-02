@@ -38,7 +38,7 @@ const TypeWriterText = ({tags}) => {
     <div className="wrapper">
       <div className="dynamic-txt">
         <ul>
-          <li className={`${isDarkMode ? "darkMode" : "lightMode"}`}><span>Frontend Developer</span></li>
+          <li className={`${isDarkMode ? "darkMode" : "lightMode"}`}><span>FullStack Developer</span></li>
           <li className={`${isDarkMode ? "darkMode" : "lightMode"}`}><span>AIML Engineer</span></li>
         </ul>
       </div>

@@ -12,6 +12,8 @@ import javascript from './../assets/javaScript.svg';
 import reactIcon from './../assets/react.svg';
 import tailwind from './../assets/tailwind.svg';
 import github from './../assets/gitHub.svg';
+import node from "./../assets/nodejsStackedDArk.svg";
+import express from "./../assets/express.png"
 
 import problemSolving from './../assets/problemSolving.png';
 import projectManagement from './../assets/projectManagement.png';
@@ -92,6 +94,8 @@ const TechStack = () => {
           <SkillCard icon={reactIcon} label="React" index={4} />
           <SkillCard icon={tailwind} label="TailwindCSS" index={5} />
           <SkillCard icon={github} label="GitHub" index={6} />
+          <SkillCard icon={node} label="Node.js" index={7} />
+          <SkillCard icon={express} label="Express" index={8} />
         </div>
       </motion.section>
 

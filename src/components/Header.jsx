@@ -15,7 +15,7 @@ const Header = () => {
 
   const {isDarkMode, setIsDarkMode} = useContext(ThemeContext);
 
-  console.log(isDarkMode);
+  // console.log(isDarkMode);
   
 
   return (
@@ -58,7 +58,7 @@ const Header = () => {
           whileInView={{ opacity: 1 }}
           transition={{duration: 0.6, delay: 0.7}}
          className={`max-w-xl px-4 ${isDarkMode ? "text-gray-100" : "text-gray-700"}`}>
-          Aiming to work with an organization that works dynamically and gives me a chance to share as well as enhance my skills towards the growth of organization and myself.
+          As a BTech student specializing in AI and ML, I have developed impactful projects such as PulsePoint, a doctor consultation platform powered by AI and human action detection. I bring a strong foundation in problem-solving, data structures, and algorithms, which enables me to develop efficient, scalable solutions. Beyond technical skills, I am highly adaptable, with strong communication and teamwork abilities, making me an effective collaborator in cross-functional teams.
         </motion.p>
 
         <div className='flex items-center justify-center gap-2'>
