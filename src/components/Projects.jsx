@@ -14,6 +14,16 @@ const projectList = [
     ],
   },
   {
+    title: "BookIt Experiences",
+    overview: "Full-stack booking platform for curated experiences with React frontend and Express backend.",
+    link: "https://bookit-frontend-85y8.onrender.com",
+    points: [
+      "Responsive UI with Tailwind CSS for a seamless user journey.",
+      "Integrated promo code application with minimum amount validation.",
+      "Backend powered by MongoDB Atlas, deployed on Render.",
+    ],
+  },
+  {
     title: "Human Action Recognition",
     overview: "Deep learning-based video classification using ConvLSTM and LRCN.",
     link: "https://github.com/Krishna-mudgal/Human_Action_recognition-",
