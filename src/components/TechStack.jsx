@@ -28,46 +28,68 @@ import { motion } from 'motion/react';
 
 const TechStack = () => {
 
-  const {isDarkMode} = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
 
   const SkillCard = ({ icon, label, index }) => (
-    <motion.div className={`w-32 h-32 flex flex-col items-center justify-center border-[0.5px] rounded-xl p-6 cursor-pointer transition duration-500
-      hover:-translate-y-1 hover:scale-105
-      ${isDarkMode
-        ? 'bg-[#11001F] border-gray-600 hover:bg-[#2a004a] hover:shadow-[4px_4px_0_#000] text-gray-100'
-        : 'bg-white border-gray-400 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] text-gray-700'}
-    `}
-    initial={{ opacity: 0, z:-200, scale:0.5 }}
-    whileInView={{ opacity: 1, z:0, scale:1 }}
-    transition={{ duration: 0.8, delay: (index * 0.2) }}
+    <motion.div
+      className={`w-32 h-32 flex flex-col items-center justify-center border-[0.5px] rounded-xl p-6 cursor-pointer transition duration-500
+    hover:-translate-y-1 hover:scale-105
+    ${isDarkMode
+          ? 'bg-[#11001F] border-gray-600 hover:bg-[#2a004a] hover:shadow-[4px_4px_0_#000] text-gray-100'
+          : 'bg-white border-gray-400 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] text-gray-700'}
+  `}
+      initial={{ opacity: 0, z: -200, scale: 0.5 }}
+      whileInView={{
+        opacity: 1,
+        z: 0,
+        scale: 1
+      }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.8,
+        delay: index * 0.2,
+        ease: "easeOut",
+        scale: { type: "spring", stiffness: 70 },
+        z: { type: "spring", stiffness: 70 }
+      }}
     >
-      <img src={icon} alt={label} className={`w-12 h-12 mb-2 mt-3 ${(isDarkMode && label === "GitHub") ? "bg-white" : ""}`} />
-      <p className={`my-4 font-semibold text-sm text-center ${isDarkMode ? 'text-gray-100' : 'text-gray-700'}`}>{label}</p>
+      <img
+        src={icon}
+        alt={label}
+        className={`w-12 h-12 mb-2 mt-3 ${(isDarkMode && label === "GitHub") ? "bg-white" : ""} 
+    animate-[float_3s_ease-in-out_infinite]`}
+        style={{
+          animation: "float 3s ease-in-out infinite"
+        }}
+      />
+      <p className={`my-4 font-semibold text-sm text-center ${isDarkMode ? 'text-gray-100' : 'text-gray-700'}`}>
+        {label}
+      </p>
     </motion.div>
   );
 
   return (
     <motion.div className="min-h-screen px-4 py-12 flex flex-col items-center justify-center"
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{duration: 1}}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       <motion.h4 className={`text-center text-lg mb-2 mt-8 ${isDarkMode ? "text-gray-100" : "text-gray-700"} `}
-      initial={{ y:-20, opacity: 0 }}
-      whileInView={{ y:0, opacity: 1 }}
-      transition={{duration: 0.5, delay:0.3}}
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
       >What I Use</motion.h4>
       <motion.h2 className="text-center text-5xl mb-10"
-      initial={{ y:-20, opacity: 0 }}
-      whileInView={{ y:0, opacity: 1 }}
-      transition={{duration: 0.5, delay:0.5}}
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >Tech Stack</motion.h2>
 
       {/* AI/ML */}
       <motion.section className="mb-12 flex flex-col items-center justify-center"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{duration: 0.6, delay:0.9}}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
       >
         <h2 className={`text-2xl font-semibold mb-4 ${isDarkMode ? "text-gray-100" : "text-gray-700"}`}>AI / ML</h2>
         <div className="flex flex-wrap gap-6">
@@ -81,9 +103,9 @@ const TechStack = () => {
 
       {/* Development Skills */}
       <motion.section className="mb-12 flex flex-col items-center justify-center"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{duration: 0.6, delay:0.9}}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
       >
         <h2 className={`text-2xl font-semibold mb-4 ${isDarkMode ? "text-gray-100" : "text-gray-700"}`}>Development Skills</h2>
         <div className="flex flex-wrap gap-6">
@@ -100,14 +122,14 @@ const TechStack = () => {
       </motion.section>
 
       {/* Soft Skills */}
-      <motion.section className="mb-12 flex flex-col items-center justify-center" 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{duration: 0.6, delay:0.9}}
+      <motion.section className="mb-12 flex flex-col items-center justify-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
       >
         <h2 className={`text-2xl font-semibold mb-4 flex flex-col items-center justify-center ${isDarkMode ? "text-gray-100" : "text-gray-700"}`}>Soft Skills</h2>
         <div className="flex flex-wrap gap-6">
-          <SkillCard icon={teamWork} label="Teamwork" index={0}/>
+          <SkillCard icon={teamWork} label="Teamwork" index={0} />
           <SkillCard icon={projectManagement} label="Project Management" index={1} />
           <SkillCard icon={communication} label="Communication" index={2} />
           <SkillCard icon={problemSolving} label="Problem Solving" index={3} />
